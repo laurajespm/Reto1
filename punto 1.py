@@ -1,3 +1,6 @@
+#Los comentarios indicarán cómo se llegó a la solución
+
+#Modularmente, se definen funciones para tareas como pedir número, mensajes de bienvenida/despedida
 def askStr(msj):
     m=str(input(msj))
     return(m)
@@ -9,6 +12,7 @@ def askNumber(msj):
 def finalMsg():
     print("\nTAREA FINALIZADA")
 
+#Se definen modularmente las operaciones
 def suma (a,b):
     return(a+b)
 
@@ -24,6 +28,7 @@ def division (a,b):
 def multip (a,b):
     return(a*b)
 
+#Se crea un menú donde el usuario podrá escoger la operación a realizar, se tiene en cuenta el caso donde la opción sea equivocada-
 def menu ():
     print("***********************")
     print("CALCULADORA")
@@ -41,7 +46,8 @@ def menu ():
             return(opc)
         else:
             return(5)
-        
+
+#Operaciones básicas        
 def operaciones(n, a, b):
     if (n=="+"):
         s=suma(a,b)
@@ -58,6 +64,7 @@ def operaciones(n, a, b):
     if (n=="5"):
         print("\n Ok, tenga buen día.")
 
+#Se agrupa todo en el main
 def main():
     while 1:
         opc= menu()
