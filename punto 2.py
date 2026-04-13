@@ -1,7 +1,7 @@
 def ask_str(msj):
     m=str(input(msj))
     return m
-
+#Se recorre la palabra y se verifica de atrás hacia adelante si coincide con la debida letra, algo así como un proceso espejo.
 def check_word(w):
     l=len(w)  
     for x in range(l):
@@ -21,6 +21,7 @@ def initial_msg():
 def final_msg():
     print("Programa finalizado, hasta pronto.")
 
+#Se une todo en el main
 def main():
     initial_msg()
     w=ask_str("Ingrese la palabra a continuación: ")
