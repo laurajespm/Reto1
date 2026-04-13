@@ -1,3 +1,4 @@
+#Se define modularmente los mensajes de bienvenida, solicitud de número y string.
 def initial_msg():
     print("Buen día. De una lista de palabras que ingrese, le indico cuáles de ellas contienen las mismas letras.")
 
@@ -15,6 +16,7 @@ def ask_num(msg):
         n=int(input(msg))
     return n
 
+#Se insertan las palabras en una lista
 def create_list():
     lista=ask_num("¿Cuántas palabras va a ingresar? ")
     li=[]
@@ -23,6 +25,9 @@ def create_list():
         li.append(w)
     return li
 
+#Se recorre la lista y palabra. Sorted es la clave, pues ordena los caracteres alfabéticamente y se permite su comparación
+#Hay doble for, pues recorre todas las posibles combinaciones que existan dentro de la lista
+#Devuelve la lista de palabras que contienen las mismas letras
 def check_word(li):
     final=[]
     l=len(li)
@@ -32,6 +37,7 @@ def check_word(li):
                     final.append((li[x], li[y]))
     return final
 
+#Se agrupa todo en el main
 def main():
     initial_msg()
     lista = create_list()
